@@ -1,5 +1,13 @@
-export PATH := $(PWD)/bin:$(PATH)
+export GOBIN=$(PWD)/bin
+
+ifndef $(GOPATH)
+    export GOPATH=$(shell go env GOPATH)
+endif
+
+ifndef $(GOROOT)
+    export GOROOT=$(shell go env GOROOT)
+endif
 
 build:
-	@mkdir -p bin/
-	@go build main.go -o bin
+	@go build
+
