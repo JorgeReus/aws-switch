@@ -8,6 +8,14 @@ ifndef $(GOROOT)
     export GOROOT=$(shell go env GOROOT)
 endif
 
+$(mkdir bin)
+
+.PHONY: clean build
+
 build:
-	@go build
+	cd src; go build -o ../bin
+
+
+clean:
+	rm -rf bin
 
