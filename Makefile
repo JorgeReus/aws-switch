@@ -14,7 +14,7 @@ GOWIN := GOOS=windows GOARCH=amd64
 .PHONY: clean install
 
 install:
-	cd src; $(GOLINUX) go install; $(GOWIN) go install
+	cd src; $(GOWIN) go build -o ../bin/aws-switch.exe; $(GOLINUX) go install
 
 clean:
 	rm -rf bin
