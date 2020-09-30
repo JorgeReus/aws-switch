@@ -10,11 +10,10 @@ endif
 
 $(mkdir bin)
 
-.PHONY: clean build
+.PHONY: clean install
 
-build:
-	cd src; go build -o ../bin
-
+install:
+	cd src; go install
 
 clean:
 	rm -rf bin
