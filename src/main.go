@@ -28,7 +28,6 @@ func main() {
 		tmpfilePtr = flag.String("tmp", "/tmp/awsprofileswitcher.profile", "Temporary file location linux")
 	}
 
-	// tmpfilePtr := flag.String("tmp", "/tmp/awsprofileswitcher.profile", "Temporary file location")
 	flag.Parse()
 
 	// Parse the aws credentials
