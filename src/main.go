@@ -45,6 +45,6 @@ func main() {
 
 	// Return the selected option
 	data := []byte(fmt.Sprintf("export AWS_PROFILE=%s", result))
-	err = ioutil.WriteFile(*tmpfilePtr, data, 0644)
+	err = ioutil.WriteFile(*tmpfilePtr, data, 0755)
 	checkError(err)
 }
