@@ -1,6 +1,8 @@
 # aws-switch
 A very simple tool to switch your AWS_PROFILE in a menu
 
+![Alt Text](./.md/aps.gif)
+
 # Install
 1.- Download the binary for your OS in the releases section.
 2.- Put it on the PATH
