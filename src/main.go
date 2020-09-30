@@ -21,11 +21,15 @@ func main() {
 	checkError(err)
 	credsPtr := flag.String("creds", fmt.Sprintf("%s/.aws/credentials", user.HomeDir), "AWS credentials file location")
 
+	var prefix string
+
 	var tmpfilePtr *string
 	if runtime.GOOS == "windows" {
-		tmpfilePtr = flag.String("tmp", "/AppData/Local/Temp/awsprofileswitcher.profile", "Temporary file location windows")
+		prefix = "set"
+		tmpfilePtr = flag.String("tmp", "/AppData/Local/Temp/awsprofileswitcher.bat", "Temporary file location in windows")
 	} else {
-		tmpfilePtr = flag.String("tmp", "/tmp/awsprofileswitcher.profile", "Temporary file location linux")
+		prefix = "export"
+		tmpfilePtr = flag.String("tmp", "/tmp/awsprofileswitcher.profile", "Temporary file location in linux")
 	}
 
 	flag.Parse()
@@ -44,7 +48,7 @@ func main() {
 	checkError(err)
 
 	// Return the selected option
-	data := []byte(fmt.Sprintf("export AWS_PROFILE=%s", result))
+	data := []byte(fmt.Sprintf("%s AWS_PROFILE=%s", prefix, result))
 	err = ioutil.WriteFile(*tmpfilePtr, data, 0755)
 	checkError(err)
 }
