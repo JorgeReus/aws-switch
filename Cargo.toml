@@ -1,0 +1,16 @@
+[package]
+name = "aws-switch"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+skim = "0.9.4"
+rust-ini = "0.17.0"
+itertools = "0.10.3"
+lazy_static = "1.3.0"
+regex = "1.1.5"
+chrono = "*"
+dirs = "1.0.4"
+colored = "2"
