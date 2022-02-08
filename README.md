@@ -39,7 +39,7 @@
 
 Opinioned CLI for switching aws profiles.
 God forbid selecting your `AWS_PROFILE` via the env variable manually, it gets disastrous when you have dozens of roles.
-So this simple tool lets you select a profile in a fuzzy finder window, picture the previous dozens profiles I talked about, you have to find the profile 1 in one of the dev accounts, with this, just type `profile 1 dev` and *voilá* reduce your search space to a minimum!.
+So this simple tool lets you select a profile in a fuzzy finder window, picture the previous dozens profiles I talked about, you have to find the profile 1 in one of the dev accounts, with this, just type `profile 1 dev` and *voilà* reduce your search space to a minimum!.
 
 This tool reads both `~/.aws/config` && `~/.aws/credentials` and also has a very opinionated wait of displaying properties, please take a look at [aws-sso-creds](https://github.com/JorgeReus/aws-sso-creds) for a more complete solution regarding `AWS SSO` CLI configuration.
 
